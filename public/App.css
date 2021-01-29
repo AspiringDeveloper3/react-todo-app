@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Permanent+Marker&display=swap");
+
+body {
+  align-content: center;
+  background-color: #11999e;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.todo {
+  text-align: center;
+}
+.todo h1 {
+  font-size: 50px;
+  font-family: "Permanent Marker", sans-serif;
+  font-weight: 100;
+  color: #30e3ca;
+}
+
+.form {
+  margin-top: 2rem;
+  width: 20%;
+  height: 10vh;
+  position: absolute;
+  left: 40%;
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  color: #11999e;
+}
+input {
+  font-size: 90px;
+  height: 8vh;
+  width: 100%;
+  font-family: "Indie Flower", sans-serif;
+}
+button {
+  height: 8.4vh;
+  font-size: 18px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0 1rem 0 1rem;
+}
+button:hover {
+  background-color: white;
+  color: #11999e;
+  transition: all 0.6s ease;
+}
+
+input {
+  font-size: 24px;
+}
+
+input::placeholder {
+  font-size: 24px;
+  color: #11999e;
+  text-align: left;
+}
+
+ul {
+  position: absolute;
+  left: 40%;
+  top: 40%;
+  list-style: none;
+}
+li {
+  font-family: "Indie Flower", sans-serif;
+  font-size: 30px;
+  background-color: #30e3ca;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  height: 50px;
+  padding-left: 20px;
+}
