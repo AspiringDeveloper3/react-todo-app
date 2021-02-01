@@ -3,7 +3,6 @@ import React, { useState } from "react";
 function App() {
   const [inputVal, setInputVal] = useState("");
   const [todos, setTodos] = useState([]);
-  const [isChecked, setChecked] = useState(false);
   const tickClass = `fas fa-check-square complete-btn`;
   const crossClass = `fas fa-times cross-btn`;
 
@@ -23,7 +22,6 @@ function App() {
   }
 
   function completeTodo(event) {
-    setChecked((prevValue) => !prevValue);
     console.log(event.target.classList[1]);
     if (event.target.classList[1] === "fa-check-square") {
       event.target.classList = crossClass;
