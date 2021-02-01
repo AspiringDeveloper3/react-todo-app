@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Permanent+Marker&display=swap");
 
 body {
+  z-index: 0;
   align-content: center;
   background-color: #11999e;
+  overflow: hidden;
 }
 * {
   margin: 0;
@@ -20,6 +22,7 @@ body {
 }
 
 .form {
+  z-index: 1;
   margin-top: 2rem;
   width: 20%;
   height: 10vh;
@@ -40,8 +43,9 @@ button {
   height: 8.4vh;
   font-size: 18px;
   background: none;
-  border: none;
+  border: white 2px solid;
   color: white;
+  border-radius: 5px;
   cursor: pointer;
   padding: 0 1rem 0 1rem;
 }
@@ -52,18 +56,21 @@ button:hover {
 }
 
 input {
+  border-radius: 5px;
   font-size: 24px;
+  border:none
 }
 
 input::placeholder {
   font-size: 24px;
   color: #11999e;
-  text-align: left;
+  padding-left: 10px;
 }
 
 ul {
+  z-index: 1;
   position: absolute;
-  left: 40%;
+  left: 33%;
   top: 40%;
   list-style: none;
 }
@@ -75,6 +82,75 @@ li {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
-  height: 50px;
+  height: 60px;
   padding-left: 20px;
+}
+
+.todo-item {
+  display: flex;
+}
+.todo-item li {
+  flex: 1;
+}
+.complete-btn,
+.trash-btn,
+.edit-btn,
+.cross-btn {
+  color: white;
+  border: none;
+  padding: 1rem 1rem 4px 1rem;
+  cursor: pointer;
+  height: 40px;
+  font-size: 1.8rem;
+}
+.complete-btn {
+  background: rgb(12, 200, 100);
+}
+.trash-btn {
+  background: rgb(245, 156, 3);
+}
+.edit-btn {
+  background: rgb(3, 137, 247);
+}
+.cross-btn {
+  background: rgb(214, 60, 4);
+}
+
+.delete {
+  transform: translateY(100%) rotateZ(20deg);
+  opacity: 0;
+  transition: all 1.5s ease-out;
+}
+
+.edit-modal{
+  z-index: 10000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 97%;
+  height: 100%;
+  background-color: rgba(0,0,0, 0.5);
+  padding: 20px;
+}
+.edit-modal input{
+  background-color: #11999e;
+  color: white;
+  margin-top: 10%;
+  border-radius: 5px;
+  border: none;
+  height: 25vh;
+}
+.edit-modal input::placeholder{
+  color: white;
+}
+.edit-modal button{
+  background-color:#11999e;
+  margin-top: 50px;
+  width: 100%;
+}
+.edit-modal button:hover{
+  color:#11999e;
+  background-color: #fff;
+  border: #11999e 2px solid;
+
 }
